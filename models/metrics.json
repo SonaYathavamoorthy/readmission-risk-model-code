@@ -1,0 +1,59 @@
+{
+  "selected_model": "RandomForest",
+  "uses_scaler": false,
+  "feature_cols": [
+    "age_at_encounter",
+    "gender",
+    "length_of_stay_days",
+    "prior_admissions_365d",
+    "condition_count",
+    "medication_count",
+    "total_claim_cost"
+  ],
+  "logreg": {
+    "model": "LogisticRegression",
+    "auc": 0.793,
+    "precision": 0.35,
+    "recall": 0.933,
+    "f1": 0.509,
+    "confusion_matrix": [
+      [
+        48,
+        26
+      ],
+      [
+        1,
+        14
+      ]
+    ]
+  },
+  "random_forest": {
+    "model": "RandomForest",
+    "auc": 0.803,
+    "precision": 0.344,
+    "recall": 0.733,
+    "f1": 0.468,
+    "confusion_matrix": [
+      [
+        53,
+        21
+      ],
+      [
+        4,
+        11
+      ]
+    ]
+  },
+  "feature_importance": {
+    "total_claim_cost": 0.3891,
+    "age_at_encounter": 0.2246,
+    "medication_count": 0.1092,
+    "gender": 0.0926,
+    "length_of_stay_days": 0.0701,
+    "prior_admissions_365d": 0.0686,
+    "condition_count": 0.0457
+  },
+  "n_train": 267,
+  "n_test": 89,
+  "positive_rate": 0.171
+}
